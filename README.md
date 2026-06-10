@@ -27,10 +27,11 @@ License: [MIT](LICENSE).
 
 ## Download
 
-### ⬇ [Download for macOS (Apple Silicon)](https://github.com/Bedduworkable/boringsheets/releases/latest)
+### ⬇ [Download for macOS — Apple Silicon](https://github.com/Bedduworkable/boringsheets/releases/latest)
 
-> Apple Silicon (M-series) only for now — an Intel / universal build is coming.
-> The beta is **unsigned**, so on first launch **right-click the app → Open**, then click **Open** in the dialog (a one-time step). See [all releases ›](https://github.com/Bedduworkable/boringsheets/releases).
+> **Requires a Mac with Apple Silicon (M1 or later).** The beta is **unsigned**, so
+> on first launch **right-click the app → Open**, then click **Open** in the dialog
+> (a one-time step). See [all releases ›](https://github.com/Bedduworkable/boringsheets/releases).
 
 ## Run it
 

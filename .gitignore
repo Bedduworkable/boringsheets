@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-electron/
+*.log
+.DS_Store
+test/.*.cjs
+release/
+sample.xlsx
+.claude/

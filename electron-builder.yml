@@ -1,0 +1,37 @@
+appId: com.boringsheets.app
+productName: BoringSheets
+
+# Run electron-builder AFTER `npm run build` (Vite -> dist/, esbuild -> dist-electron/).
+# These are the only artifacts the packaged app needs at runtime.
+directories:
+  output: release
+
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+
+asar: true
+npmRebuild: false
+
+mac:
+  target:
+    - dmg
+  category: public.app-category.productivity
+  # UNSIGNED build: no Apple Developer certs available. See RELEASE.md to add signing.
+  identity: null
+  hardenedRuntime: false
+
+win:
+  target:
+    - nsis
+  # UNSIGNED build. See RELEASE.md to add code signing.
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+
+linux:
+  target:
+    - AppImage
+  category: Office

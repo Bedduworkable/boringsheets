@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ── Primary SEO ── -->
+  <title>BoringSheets — A fast, native spreadsheet for Mac. Opens & saves .xlsx</title>
+  <meta name="description" content="BoringSheets is a free-for-life, native spreadsheet app for macOS that never connects to the internet. Open and save real Excel (.xlsx) files with 175+ functions, charts, conditional formatting and filters — fully offline and completely private. Windows coming soon." />
+  <meta name="keywords" content="spreadsheet app, Excel alternative, xlsx editor Mac, native spreadsheet macOS, offline spreadsheet, free spreadsheet app, open xlsx Mac, spreadsheet software, BoringSheets" />
+  <meta name="author" content="BoringSheets" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0e100f" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://boringsheets.app/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BoringSheets" />
+  <meta property="og:title" content="BoringSheets — Free for life, 100% offline spreadsheet for Mac" />
+  <meta property="og:description" content="Open and save real Excel files. Free forever, never connects to the internet — your numbers never leave your device. 175+ functions, charts and a from-scratch engine." />
+  <meta property="og:url" content="https://boringsheets.app/" />
+  <meta property="og:image" content="https://boringsheets.app/assets/og.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BoringSheets — a native spreadsheet app" />
+
+  <!-- ── Twitter ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BoringSheets — Free for life, 100% offline spreadsheet for Mac" />
+  <meta name="twitter:description" content="Open and save real Excel files. Free forever, never connects to the internet — your numbers never leave your device. 175+ functions, charts and a from-scratch engine." />
+  <meta name="twitter:image" content="https://boringsheets.app/assets/og.svg" />
+
+  <!-- ── Icons / manifest ── -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- ── Performance ── -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- ── Structured data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://boringsheets.app/#org",
+        "name": "BoringSheets",
+        "url": "https://boringsheets.app/",
+        "logo": "https://boringsheets.app/assets/favicon.svg",
+        "email": "bedduworkable@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://boringsheets.app/#website",
+        "url": "https://boringsheets.app/",
+        "name": "BoringSheets",
+        "publisher": { "@id": "https://boringsheets.app/#org" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "BoringSheets",
+        "operatingSystem": "macOS 11+",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Spreadsheet",
+        "softwareVersion": "0.1 (beta)",
+        "url": "https://boringsheets.app/",
+        "downloadUrl": "https://boringsheets.app/#download",
+        "featureList": [
+          "Open and save Excel .xlsx files",
+          "175+ spreadsheet functions",
+          "From-scratch formula engine with incremental recalc",
+          "Charts, conditional formatting, data validation",
+          "Filters, freeze panes, fonts and number formats",
+          "CSV import/export and print to PDF",
+          "Works fully offline"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": { "@id": "https://boringsheets.app/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is BoringSheets really free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, free for life. There is no subscription, paywall, Pro tier or expiring trial. You download it once and use it forever at no cost." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can BoringSheets open my Excel files?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BoringSheets reads and writes the real .xlsx format, preserving formulas, formatting, charts, merges, conditional formatting and more." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does BoringSheets connect to the internet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No, never. BoringSheets makes zero network requests. It cannot upload, sync or phone home, so we have no idea what is in your sheets. Everything runs on your machine, fully offline." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you collect my data?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Because the app never goes online, your files and their contents cannot leave your device through BoringSheets. There is no tracking, no telemetry and no account." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a Windows version?",
+            "acceptedAnswer": { "@type": "Answer", "text": "BoringSheets is Mac-first. A Windows build is planned and coming soon." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ─────────── Top bar ─────────── -->
+  <header class="topbar">
+    <a class="logo" href="/" aria-label="BoringSheets home">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="18" rx="3" stroke="#0ae448" stroke-width="2"/>
+        <line x1="2" y1="9" x2="22" y2="9" stroke="#0ae448" stroke-width="2"/>
+        <line x1="9" y1="9" x2="9" y2="21" stroke="#0ae448" stroke-width="2"/>
+      </svg>
+      <span>BoringSheets</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Open menu" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <line class="bar bar-top" x1="3" y1="7" x2="17" y2="7" stroke="#fffce1" stroke-width="1.6" stroke-linecap="round"/>
+        <line class="bar bar-mid" x1="3" y1="10" x2="17" y2="10" stroke="#fffce1" stroke-width="1.6" stroke-linecap="round"/>
+        <line class="bar bar-bot" x1="3" y1="13" x2="17" y2="13" stroke="#fffce1" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- ─────────── Nav overlay ─────────── -->
+  <nav class="nav" id="nav" aria-label="Main menu">
+    <div class="nav-bg"></div>
+
+    <div class="nav-top nav-border nav-panel" id="navTop">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#features" tabindex="-1">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#engine" tabindex="-1">The engine</a></li>
+        <li class="nav-item"><a class="nav-link" href="#download" tabindex="-1">Download</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq" tabindex="-1">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="/privacy.html" tabindex="-1">Privacy</a></li>
+      </ul>
+      <div class="nav-login">Beta build · <a href="#download">get it for Mac →</a></div>
+    </div>
+
+    <div class="nav-middle nav-border nav-panel" id="navMiddle">
+      <div class="nav-middle-header">What's New</div>
+      <div class="nav-middle-card">
+        <div class="nav-middle-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <div class="nav-middle-info">
+          <div class="nav-middle-title">BoringSheets 0.1 beta</div>
+          <div class="nav-middle-desc">Filters, fonts, charts &amp; full .xlsx round-trip.</div>
+        </div>
+      </div>
+      <div class="nav-middle-actions">
+        <a href="#download">Download</a>
+        <a href="#features">See features</a>
+      </div>
+    </div>
+
+    <div class="nav-bottom nav-border nav-panel" id="navBottom">
+      <ul class="nav-socials">
+        <li><a href="#" tabindex="-1">GitHub</a></li>
+        <li><a href="#" tabindex="-1">X</a></li>
+        <li><a href="mailto:bedduworkable@gmail.com" tabindex="-1">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ─────────── Hero ─────────── -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <span class="eyebrow">Free for life · 100% offline</span>
+        <h1>A real spreadsheet, <span class="flip green">built from scratch</span>.</h1>
+        <p class="sub reveal">Open and save genuine Excel files. 175+ functions, charts, conditional formatting and filters — in a fast, native app that's <strong>free forever</strong> and <strong>never connects to the internet</strong>. Your numbers never leave your device, so no one can see what's in your sheets. Not even us.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 1.6c.1 1-.3 2-1 2.8-.7.8-1.8 1.4-2.8 1.3-.1-1 .4-2 1-2.7.7-.8 1.9-1.4 2.8-1.4zM19.6 17c-.5 1.2-.8 1.7-1.4 2.7-.9 1.4-2.2 3.2-3.8 3.2-1.4 0-1.8-.9-3.7-.9s-2.4.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C1 16.6.7 11.4 2.4 8.7c1-1.5 2.6-2.4 4.1-2.4 1.6 0 2.6 1 3.9 1 1.3 0 2-1 3.9-1 1.3 0 2.7.7 3.7 2-3.2 1.8-2.7 6.4 1.6 8.7z"/></svg>
+            Download for Mac
+          </a>
+          <a class="btn btn-ghost" href="#features">Explore features</a>
+        </div>
+        <p class="note">Free forever · Apple Silicon &amp; Intel · never goes online</p>
+
+        <!-- App mockup -->
+        <div class="mockup" role="img" aria-label="BoringSheets app window showing a spreadsheet with a budget calculation">
+          <div class="mk-titlebar">
+            <span class="mk-dot r"></span><span class="mk-dot y"></span><span class="mk-dot g"></span>
+            <span class="mk-title">Budget.xlsx — BoringSheets</span>
+          </div>
+          <div class="mk-toolbar">
+            <span class="mk-tb">B</span><span class="mk-tb" style="font-style:italic">I</span>
+            <span class="mk-tb sep"></span>
+            <span class="mk-tb">$</span><span class="mk-tb">%</span>
+            <span class="mk-tb sep"></span>
+            <span class="mk-tb">Σ</span><span class="mk-tb">▦</span><span class="mk-tb">▽</span>
+          </div>
+          <div class="mk-grid">
+            <div class="mk-cell mk-head mk-rownum"></div>
+            <div class="mk-cell mk-head">A</div><div class="mk-cell mk-head">B</div>
+            <div class="mk-cell mk-head">C</div><div class="mk-cell mk-head hide-sm">D</div>
+            <div class="mk-cell mk-head hide-sm">E</div><div class="mk-cell mk-head hide-sm">F</div>
+
+            <div class="mk-cell mk-rownum">1</div>
+            <div class="mk-cell"><b>Item</b></div><div class="mk-cell"><b>Q1</b></div>
+            <div class="mk-cell"><b>Q2</b></div><div class="mk-cell hide-sm"><b>Q3</b></div>
+            <div class="mk-cell hide-sm"><b>Q4</b></div><div class="mk-cell hide-sm"><b>Total</b></div>
+
+            <div class="mk-cell mk-rownum">2</div>
+            <div class="mk-cell">Revenue</div><div class="mk-cell mk-num">12,400</div>
+            <div class="mk-cell mk-num">15,200</div><div class="mk-cell mk-num hide-sm">18,050</div>
+            <div class="mk-cell mk-num hide-sm">21,300</div><div class="mk-cell mk-num hide-sm mk-green">66,950</div>
+
+            <div class="mk-cell mk-rownum">3</div>
+            <div class="mk-cell">Costs</div><div class="mk-cell mk-num">7,100</div>
+            <div class="mk-cell mk-num">8,400</div><div class="mk-cell mk-num hide-sm">9,250</div>
+            <div class="mk-cell mk-num hide-sm">10,900</div><div class="mk-cell mk-num hide-sm mk-green">35,650</div>
+
+            <div class="mk-cell mk-rownum">4</div>
+            <div class="mk-cell"><b>Profit</b></div>
+            <div class="mk-cell mk-num mk-sel mk-green">5,300</div>
+            <div class="mk-cell mk-num mk-green">6,800</div><div class="mk-cell mk-num hide-sm mk-green">8,800</div>
+            <div class="mk-cell mk-num hide-sm mk-green">10,400</div><div class="mk-cell mk-num hide-sm mk-green">31,300</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── USP band ─────────── -->
+    <section class="band">
+      <div class="wrap two-col">
+        <article class="card usp-card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2c-.4-.9-1.4-1.4-2.5-1.4-1.5 0-2.6.9-2.6 2 0 2.6 5.4 1.3 5.4 4 0 1.2-1.2 2.1-2.8 2.1-1.2 0-2.2-.5-2.6-1.5M12 6.2v1.6M12 16.2v1.6"/></svg></div>
+          <h3>Free, for life.</h3>
+          <p>No subscription, no paywall, no "Pro" tier, no trial that expires. BoringSheets is free forever — you pay nothing, ever.</p>
+        </article>
+        <article class="card usp-card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8.8C5 6 8.3 4.5 12 4.5c3.7 0 7 1.5 10 4.3M5 12.2c2-1.8 4.4-2.8 7-2.8 2.6 0 5 1 7 2.8M8.5 15.6c1-.9 2.2-1.4 3.5-1.4 1.3 0 2.5.5 3.5 1.4M12 19h.01"/><line x1="3" y1="3" x2="21" y2="21"/></svg></div>
+          <h3>It never goes online.</h3>
+          <p>BoringSheets makes zero network requests. It can't upload, sync, or phone home — so we have no idea what's in your sheets. That's not a limitation; it's the whole point. Your data is yours.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─────────── Features ─────────── -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Features</span>
+          <h2 class="reveal">Everything you expect from a spreadsheet — nothing you don't.</h2>
+          <p>A focused, native app that respects your files, your machine, and your time.</p>
+        </div>
+        <div class="features">
+          <article class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div>
+            <h3>Real <code class="tag">.xlsx</code></h3>
+            <p>Open and save genuine Excel files — formulas, fonts, borders, merges, charts, conditional formatting and notes all survive the round-trip.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M4 19h16M8 16l3-4 3 2 4-6"/></svg></div>
+            <h3>175+ functions</h3>
+            <p>From <code class="tag">SUM</code> to <code class="tag">XLOOKUP</code>, with cross-sheet references, whole-column ranges and instant incremental recalculation.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="7"/><rect x="13" y="7" width="3" height="11"/></svg></div>
+            <h3>Charts &amp; data</h3>
+            <p>Bar, line and pie charts, data validation dropdowns, and Google-Sheets-style column filters with sort and value selection.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+            <h3>Rich formatting</h3>
+            <p>Font family and size, colors, borders, number formats, text wrap, alignment, conditional formatting and freeze panes.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <h3>Never goes online</h3>
+            <p>Zero network requests — the app literally can't reach the internet. No account, no cloud, no telemetry. We can't see your sheets, and that's by design.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+            <h3>Native &amp; fast</h3>
+            <p>A canvas-rendered grid with virtual scrolling and worksheet-only zoom. It opens instantly and stays smooth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── Engine band ─────────── -->
+    <section class="band" id="engine">
+      <div class="wrap grid2">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="kicker">Under the hood</span>
+          <h2 class="reveal">Not a wrapper. A real engine.</h2>
+          <p>BoringSheets isn't a thin shell over someone else's library. The spreadsheet engine was written from scratch in TypeScript — a tokenizer, a recursive-descent parser, an evaluator and a cross-sheet dependency graph with incremental recalc and cycle detection.</p>
+        </div>
+        <div class="pipeline" aria-hidden="true">
+          <div class="pipe-step"><b>1</b> Tokenizer — formula text → tokens</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-step"><b>2</b> Parser — tokens → AST</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-step"><b>3</b> Evaluator — AST → values</div>
+          <div class="pipe-arrow">↓</div>
+          <div class="pipe-step"><b>4</b> Dependency graph — incremental recalc + cycle detection</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── Stats ─────────── -->
+    <section>
+      <div class="wrap stats">
+        <div class="stat"><div class="n">$0</div><div class="l">free, forever</div></div>
+        <div class="stat"><div class="n">0</div><div class="l">network requests</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">offline &amp; private</div></div>
+        <div class="stat"><div class="n">175+</div><div class="l">functions</div></div>
+      </div>
+    </section>
+
+    <!-- ─────────── Download ─────────── -->
+    <section class="download" id="download">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Download</span>
+          <h2 class="reveal">Get BoringSheets.</h2>
+          <p>Free for life — no subscription, no account, no catch. Pick your platform below.</p>
+        </div>
+        <div class="dl-grid">
+          <div class="dl-card">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#fffce1" aria-hidden="true"><path d="M16.5 1.6c.1 1-.3 2-1 2.8-.7.8-1.8 1.4-2.8 1.3-.1-1 .4-2 1-2.7.7-.8 1.9-1.4 2.8-1.4zM19.6 17c-.5 1.2-.8 1.7-1.4 2.7-.9 1.4-2.2 3.2-3.8 3.2-1.4 0-1.8-.9-3.7-.9s-2.4.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C1 16.6.7 11.4 2.4 8.7c1-1.5 2.6-2.4 4.1-2.4 1.6 0 2.6 1 3.9 1 1.3 0 2-1 3.9-1 1.3 0 2.7.7 3.7 2-3.2 1.8-2.7 6.4 1.6 8.7z"/></svg>
+              macOS
+            </h3>
+            <p class="meta">Apple Silicon &amp; Intel · macOS 11+ · .dmg</p>
+            <a class="btn btn-primary" href="#" data-dl="mac">Download for Mac</a>
+            <p class="meta" style="margin-top:8px">Beta build is unsigned — on first launch, right-click the app and choose <b>Open</b>.</p>
+          </div>
+          <div class="dl-card soon">
+            <span class="pill">Coming soon</span>
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#7c7c6f" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zM11.5 4.2 21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg>
+              Windows
+            </h3>
+            <p class="meta">Windows 10/11 · .exe installer</p>
+            <a class="btn btn-ghost" href="#" aria-disabled="true">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── FAQ ─────────── -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">FAQ</span>
+          <h2 class="reveal">Questions, answered.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Is BoringSheets really free?</summary>
+            <p>Yes — free for life. There's no subscription, no paywall, no "Pro" tier and no trial that expires. You download it once and use it forever, at no cost.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can it open my Excel files?</summary>
+            <p>Yes. BoringSheets reads and writes the real <code class="tag">.xlsx</code> format, preserving formulas, formatting, charts, merges, conditional formatting and more.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it connect to the internet?</summary>
+            <p>No — never. BoringSheets makes zero network requests. It can't upload, sync or "phone home," which means we genuinely have no idea what's in your sheets. Everything happens on your machine, fully offline.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you collect my data?</summary>
+            <p>No. Because the app never goes online, your files and their contents can't leave your device through BoringSheets. There's no tracking, no telemetry and no account. See our <a href="/privacy.html" style="color:var(--green)">Privacy Policy</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a Windows version?</summary>
+            <p>BoringSheets is Mac-first. A Windows build is planned and coming soon — choose "Notify me" in the download section.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does macOS say the app can't be opened?</summary>
+            <p>The beta build isn't yet code-signed with an Apple Developer ID. On first launch, right-click (or Control-click) the app icon and choose <b>Open</b>, then confirm. This is a one-time step.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── CTA band ─────────── -->
+    <section class="cta-band band">
+      <div class="wrap">
+        <h2 class="flip">Spreadsheets, the boring way.</h2>
+        <p>Free for life. Never online. Fully Excel-compatible. The way a spreadsheet should be.</p>
+        <a class="btn btn-primary" href="#download">Download for Mac</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────── Footer ─────────── -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="logo" href="/" aria-label="BoringSheets home">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="18" rx="3" stroke="#0ae448" stroke-width="2"/>
+              <line x1="2" y1="9" x2="22" y2="9" stroke="#0ae448" stroke-width="2"/>
+              <line x1="9" y1="9" x2="9" y2="21" stroke="#0ae448" stroke-width="2"/>
+            </svg>
+            <span>BoringSheets</span>
+          </a>
+          <p class="foot-blurb">A fast, native, private spreadsheet for macOS. Built from scratch.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#engine">The engine</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:bedduworkable@gmail.com">Email us</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">X</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="year">2026</span> BoringSheets. All rights reserved.</span>
+        <span>Made with care · Mac first</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP (SplitText &amp; ScrollTrigger are free as of GSAP 3.13) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="/main.js"></script>
+</body>
+</html>

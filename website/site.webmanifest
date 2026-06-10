@@ -1,0 +1,12 @@
+{
+  "name": "BoringSheets",
+  "short_name": "BoringSheets",
+  "description": "A fast, native, private spreadsheet for macOS. Opens and saves real .xlsx files.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e100f",
+  "theme_color": "#0e100f",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

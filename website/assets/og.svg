@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#0ae448" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#0ae448" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0e100f"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(96,150)">
+    <rect x="0" y="0" width="52" height="52" rx="11" fill="none" stroke="#0ae448" stroke-width="5"/>
+    <line x1="0" y1="18" x2="52" y2="18" stroke="#0ae448" stroke-width="5"/>
+    <line x1="18" y1="18" x2="18" y2="52" stroke="#0ae448" stroke-width="5"/>
+    <text x="72" y="40" font-family="system-ui, sans-serif" font-size="38" font-weight="700" fill="#fffce1">BoringSheets</text>
+  </g>
+  <text x="96" y="320" font-family="system-ui, sans-serif" font-size="78" font-weight="700" fill="#fffce1" letter-spacing="-2">A real spreadsheet,</text>
+  <text x="96" y="408" font-family="system-ui, sans-serif" font-size="78" font-weight="700" letter-spacing="-2"><tspan fill="#fffce1">built </tspan><tspan fill="#0ae448">from scratch.</tspan></text>
+  <text x="96" y="486" font-family="ui-monospace, monospace" font-size="29" fill="#7c7c6f">Free for life · never goes online · opens &amp; saves .xlsx</text>
+</svg>

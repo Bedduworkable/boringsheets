@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    />
+    <title>BoringSheets</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="toolbar"></div>
+      <div id="formula-bar">
+        <input id="name-box" type="text" spellcheck="false" title="Name box" />
+        <span id="fx-label">fx</span>
+        <input id="formula-input" type="text" spellcheck="false" placeholder="" />
+      </div>
+      <div id="grid-container">
+        <canvas id="grid-canvas"></canvas>
+        <input id="cell-editor" type="text" spellcheck="false" />
+        <div id="chart-layer"></div>
+      </div>
+      <div id="sheet-tabs"></div>
+      <div id="status-bar"></div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

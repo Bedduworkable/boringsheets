@@ -1,5 +1,10 @@
 # BoringSheets
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-0ae448.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/Bedduworkable/boringsheets?include_prereleases&color=0ae448)](https://github.com/Bedduworkable/boringsheets/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Bedduworkable/boringsheets/total?color=0ae448)](https://github.com/Bedduworkable/boringsheets/releases)
+![Platform: macOS](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
+
 **A fast, native spreadsheet for macOS — free for life, and it never connects to the internet.**
 
 BoringSheets opens and saves real Excel `.xlsx` files, with 175+ functions,
@@ -17,6 +22,13 @@ existing library. Built on Electron. Mac-first; Windows planned.
 > launch, right-click the app and choose **Open**.
 
 License: [MIT](LICENSE).
+
+## Download
+
+### ⬇ [Download for macOS (Apple Silicon)](https://github.com/Bedduworkable/boringsheets/releases/latest)
+
+> Apple Silicon (M-series) only for now — an Intel / universal build is coming.
+> The beta is **unsigned**, so on first launch **right-click the app → Open**, then click **Open** in the dialog (a one-time step). See [all releases ›](https://github.com/Bedduworkable/boringsheets/releases).
 
 ## Run it
 
@@ -45,7 +57,7 @@ npm start          # launch the built app
 - **Fill handle**: drag the selection corner to copy values, extend numeric
   series, or offset formulas (relative refs move, `$`-anchored refs stay).
 - **Formulas**: full expression parser with Excel operator precedence and
-  **~170 built-in functions** — math/trig, statistical (MEDIAN, STDEV,
+  **175+ built-in functions** — math/trig, statistical (MEDIAN, STDEV,
   PERCENTILE…), the IFS family (SUMIFS/COUNTIFS/AVERAGEIFS/MAXIFS/MINIFS),
   text, logical (IF, SWITCH, IFERROR…), lookup (VLOOKUP, XLOOKUP, INDEX/MATCH,
   CHOOSE…), date/time, information (ISNUMBER, ISBLANK…), and financial
@@ -57,10 +69,12 @@ npm start          # launch the built app
 - **Freeze panes**: freeze rows above / columns left of the selection so they
   stay put while the rest scrolls.
 - **Sort & filter**: sort a selection ascending/descending by the active column
-  (relative formulas re-anchor as rows move), and an AutoFilter that hides rows
-  by value.
-- **Formatting**: bold / italic / underline / strikethrough, text & fill color,
-  alignment, and Excel-style number formats (currency, percent, comma, dates).
+  (relative formulas re-anchor as rows move), and a Google-Sheets-style filter —
+  a funnel in each column header with sort and a searchable value checklist;
+  multiple columns combine with AND.
+- **Formatting**: font family & size, bold / italic / underline / strikethrough,
+  text & fill color, alignment, text wrap (rows auto-fit), borders, and
+  Excel-style number formats (currency, percent, comma, dates).
 - **Conditional formatting**: cell-value rules (>, <, between, equal, text
   contains), duplicate/top/bottom, color scales, and data bars.
 - **Charts**: column, bar, line, area, pie, and scatter — floating, draggable,
@@ -94,7 +108,7 @@ npx esbuild test/engine.test.ts --bundle --platform=node --format=cjs --outfile=
 
 ## Roadmap toward fuller Excel parity
 
-Remaining: pivot tables, the rest of Excel's ~480 functions, persisting
-conditional formatting / data validation / charts / freeze state into the
-`.xlsx` file (currently in-app only; values, formulas and styles do round-trip),
-and richer chart styling.
+Remaining: pivot tables, the rest of Excel's ~480 functions, persisting **charts**
+into the `.xlsx` file (charts are in-app only for now — formulas, styles, fonts,
+merges, conditional formatting, data validation, freeze panes, named ranges and
+notes already round-trip), and richer chart styling.

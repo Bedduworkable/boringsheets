@@ -13,6 +13,8 @@ renderer, formula parser, calculation/dependency engine, and `.xlsx`
 reader/writer — is **written from scratch in TypeScript**, not wrapped around an
 existing library. Built on Electron. Mac-first; Windows planned.
 
+![BoringSheets — a budget spreadsheet showing formulas, bold headers and a percent margin row](assets/screenshot.png)
+
 - 🆓 **Free for life** — no subscription, no account, no telemetry.
 - 🔌 **100% offline** — zero network requests; your data never leaves your device.
 - 📄 **Real `.xlsx`** — formulas, formatting, charts, merges, conditional formatting, named ranges.
